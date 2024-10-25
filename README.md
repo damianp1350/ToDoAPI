@@ -6,7 +6,7 @@ This project is a simple REST API that manages ToDo tasks, with full CRUD operat
 
 1. Clone this repository.
 2. Ensure you have Docker Desktop installed.
-3. .env file is already created for testing purposes only. Change it if needed.
+3. **.env file is already created for testing purposes only. Change it if needed.**
 4. You can run the project using visual studio, choose docker-compose as startup item and press Docker Compose(start button) or F5
 
 ## To run tests
