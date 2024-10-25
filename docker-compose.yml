@@ -1,0 +1,23 @@
+services:
+  todoapi:
+    image: ${DOCKER_REGISTRY-}todoapi
+    build:
+      context: .
+      dockerfile: ToDoAPI/Dockerfile
+    ports:
+      - "5000:5000" 
+      - "5001:5001"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=${DB_HOST};Port=5432;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
+
+  todo.database:
+    image: postgres:latest
+    container_name: todo.database
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - ./.containers/products-db:/var/lib/postgresql/data
+    ports:
+      - 5431:5432
