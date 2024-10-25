@@ -10,5 +10,5 @@ This project is a simple REST API that manages ToDo tasks, with full CRUD operat
 4. You can run the project using visual studio, choose docker-compose as startup item and press Docker Compose(start button) or F5
 
 ## To run tests
-1. cd cd .\ToDoAPI.Tests\
+1. cd .\ToDoAPI.Tests\
 2. dotnet test
