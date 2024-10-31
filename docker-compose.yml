@@ -18,6 +18,8 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
-      - ./.containers/products-db:/var/lib/postgresql/data
+      - todo-db-data:/var/lib/postgresql/data
     ports:
       - 5431:5432
+volumes:
+  todo-db-data:
